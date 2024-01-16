@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { ContextToken } from '@/utils/context-token'
 import * as authService from '@/services/auth-service'
 
-export default function LoggedUser() {
+export const LoggedUser = () => {
   const { contextTokenPayload, setContextTokenPayload } =
     React.useContext(ContextToken)
 

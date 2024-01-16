@@ -1,13 +1,13 @@
 import React from 'react'
 import CartIcon from '../CartIcon'
-import LoggedUser from '../LoggedUser'
+import { LoggedUser } from '../LoggedUser'
 import { Link } from 'react-router-dom'
 import iconAdmin from '../../assets/settings.svg'
 import { ContextToken } from '@/utils/context-token'
 import * as authService from '@/services/auth-service'
 import './styles.css'
 
-export default function HeaderClient() {
+export const HeaderClient = () => {
   const { contextTokenPayload } = React.useContext(ContextToken)
 
   return (
