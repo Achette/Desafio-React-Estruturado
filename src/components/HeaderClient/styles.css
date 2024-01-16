@@ -1,0 +1,4 @@
+.dsc-header-client {
+  background-color: var(--dsc-color-header-client);
+  color: var(--dsc-color-primary);
+}
