@@ -1,25 +1,25 @@
-import { useState } from 'react';
-import './styles.css';
+import React from 'react'
+import './styles.css'
 
 type Props = {
-  onSearch: Function;
-};
+  onSearch: (arg: string) => void
+}
 
-export default function SearchBar({ onSearch }: Props) {
-  const [text, setText] = useState('');
+export const SearchBar = ({ onSearch }: Props) => {
+  const [text, setText] = React.useState('')
 
   function handleSubmit(event: any) {
-    event.preventDefault();
-    onSearch(text);
+    event.preventDefault()
+    onSearch(text)
   }
 
   function handleChange(event: any) {
-    setText(event.target.value);
+    setText(event.target.value)
   }
 
   function handleResetClick() {
-    setText('');
-    onSearch(text);
+    setText('')
+    onSearch(text)
   }
 
   return (
@@ -33,5 +33,5 @@ export default function SearchBar({ onSearch }: Props) {
       />
       <button onClick={handleResetClick}>X</button>
     </form>
-  );
+  )
 }

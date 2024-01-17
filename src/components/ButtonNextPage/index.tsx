@@ -1,13 +1,13 @@
-import './styles.css';
+import './styles.css'
 
 type Props = {
-  onNextPage: Function;
-};
+  onNextPage: () => void
+}
 
-export default function ButtonNextPage({ onNextPage }: Props) {
+export const ButtonNextPage = ({ onNextPage }: Props) => {
   return (
     <div onClick={() => onNextPage()} className="dsc-btn-next-page">
       Carregar mais
     </div>
-  );
+  )
 }
