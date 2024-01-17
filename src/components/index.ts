@@ -1,0 +1,5 @@
+export * from './HeaderClient/index'
+export * from './LoggedUser/index'
+export * from './SearchBar/index'
+export * from './CatalogCard/index'
+export * from './ButtonNextPage/index'
