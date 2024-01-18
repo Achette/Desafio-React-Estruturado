@@ -3,7 +3,7 @@ import { UserDTO } from '@/models'
 import * as userService from '@/services/user-service'
 import './styles.css'
 
-export default function AdminHome() {
+export const AdminHome = () => {
   const [user, setUser] = React.useState<UserDTO>()
 
   React.useEffect(() => {

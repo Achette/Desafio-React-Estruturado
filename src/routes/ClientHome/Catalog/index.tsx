@@ -11,7 +11,7 @@ type QueryParams = {
   sort?: string
 }
 
-export default function Catalog() {
+export const Catalog = () => {
   const [products, setProducts] = React.useState<ProductDTO[]>([])
 
   const [queryParams, setQueryParams] = React.useState<QueryParams>({

@@ -1,13 +1,11 @@
+import { Outlet } from 'react-router-dom'
+import { HeaderClient } from '@/components'
 
-import { Outlet } from 'react-router-dom';
-import { HeaderClient } from '@/components';
-
-
-export default function ClientHome() {
+export const ClientHome = () => {
   return (
     <>
       <HeaderClient />
       <Outlet />
     </>
-  );
+  )
 }
