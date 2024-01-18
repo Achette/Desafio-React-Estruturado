@@ -1,6 +1,6 @@
+import { OrderDTO } from '@/models'
 import { requestBackend } from '@/utils'
 import { AxiosRequestConfig } from 'axios'
-import { OrderDTO } from '../models/order'
 
 export const findByIdRequest = (id: number) => {
   const config: AxiosRequestConfig = {
