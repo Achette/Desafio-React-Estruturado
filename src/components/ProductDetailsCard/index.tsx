@@ -1,5 +1,5 @@
 import { ProductDTO } from '@/models'
-import ProductCategory from '../ProductCategory'
+import { ProductCategory } from '../ProductCategory'
 import './styles.css'
 
 type Props = {
