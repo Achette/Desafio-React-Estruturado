@@ -2,7 +2,7 @@ import { requestBackend } from '@/utils'
 import { AxiosRequestConfig } from 'axios'
 import { OrderDTO } from '../models/order'
 
-export function findByIdRequest(id: number) {
+export const findByIdRequest = (id: number) => {
   const config: AxiosRequestConfig = {
     url: `/orders/${id}`,
     withCredentials: true,
@@ -10,7 +10,7 @@ export function findByIdRequest(id: number) {
   return requestBackend(config)
 }
 
-export function placeOrderRequest(cart: OrderDTO) {
+export const placeOrderRequest = (cart: OrderDTO) => {
   const config: AxiosRequestConfig = {
     url: '/orders',
     method: 'POST',
