@@ -1,7 +1,7 @@
 import { BASE_URL } from './system'
 import { history } from './history'
 import axios, { AxiosRequestConfig } from 'axios'
-import * as authService from '../services/auth-service'
+import * as authService from '@/services/auth-service'
 
 export const requestBackend = (config: AxiosRequestConfig) => {
   const headers = config.withCredentials
