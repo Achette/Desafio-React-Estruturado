@@ -1,9 +1,9 @@
 import React from 'react'
 import { PrivateRoute } from './components'
 import { AccessTokenPayloadDTO } from './models'
-import { Navigate, Route, Routes } from 'react-router-dom'
 import * as authService from './services/auth-service'
 import * as cartService from './services/cart-service'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { ContextCartCount, ContextToken, history } from './utils'
 import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom'
 import {
@@ -24,6 +24,7 @@ export default function App() {
   const [contextTokenPayload, setContextTokenPayload] =
     React.useState<AccessTokenPayloadDTO>()
 
+    
   React.useEffect(() => {
     setContextCartCount(cartService.getCart().items.length)
 
