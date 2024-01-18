@@ -1,14 +1,14 @@
+import { ProductDTO } from '@/models'
+import { requestBackend } from '@/utils'
 import { AxiosRequestConfig } from 'axios'
-import { ProductDTO } from '../models/product'
-import { requestBackend } from '../utils/requests'
 
-export function findPageRequest(
+export const findPageRequest = (
   page: number,
   name: string,
   size = 12,
   // sort = 'name,desc',
   sort = 'name'
-) {
+) => {
   const config: AxiosRequestConfig = {
     method: 'GET',
     url: '/products',
@@ -23,7 +23,7 @@ export function findPageRequest(
   return requestBackend(config)
 }
 
-export function findById(id: number) {
+export const findById = (id: number) => {
   return requestBackend({ url: `/products/${id}` })
 }
 
@@ -36,7 +36,7 @@ export function deleteById(id: number) {
   return requestBackend(config)
 }
 
-export function updateRequest(obj: ProductDTO) {
+export const updateRequest = (obj: ProductDTO) => {
   const config: AxiosRequestConfig = {
     method: 'PUT',
     url: `/products/${obj.id}`,
@@ -46,7 +46,7 @@ export function updateRequest(obj: ProductDTO) {
   return requestBackend(config)
 }
 
-export function insertRequest(obj: ProductDTO) {
+export const insertRequest = (obj: ProductDTO) => {
   const config: AxiosRequestConfig = {
     method: 'POST',
     url: '/products',
